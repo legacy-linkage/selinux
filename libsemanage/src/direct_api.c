@@ -21,7 +21,11 @@
 
 #include <sepol/module.h>
 #include <sepol/handle.h>
+#ifdef ANDROID
+#include <cil/cil.h>
+#else
 #include <sepol/cil/cil.h>
+#endif
 #include <selinux/selinux.h>
 
 #include <assert.h>

@@ -26,7 +26,11 @@
 
 #include <sys/time.h>
 #include <sepol/module.h>
+#ifdef ANDROID
+#include <cil/cil.h>
+#else
 #include <sepol/cil/cil.h>
+#endif
 #include "handle.h"
 
 enum semanage_store_defs {
